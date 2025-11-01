@@ -1,0 +1,13 @@
+services:
+  nest-db:
+    image: postgres:18.0
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: nest
+    volumes:
+      - "nest_db:/var/lib/postgresql/data"
+volumes:
+  nest_db:
